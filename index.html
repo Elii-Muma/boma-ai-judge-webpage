@@ -23,6 +23,7 @@
       --max: 1200px;
     }
 
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -120,38 +121,43 @@
       gap: 12px;
     }
 
-    .btn-download {
-      display: inline-block;
-      background: var(--orange);
-      color: var(--white);
-      font-family: 'Roboto Flex', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      padding: 14px 36px;
-      text-decoration: none;
-      transition: background 0.15s ease;
-    }
-
-    .btn-download:hover { background: #d44e1f; }
-
-    .meta-row {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .meta-item {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.04em;
-      color: var(--grey-40);
-    }
-
-    .meta-item span {
-      color: var(--black);
-      font-weight: 500;
-    }
+      .btn-download {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: #EB5E28; color: #fff;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 0.9rem; font-weight: 500; letter-spacing: 0.02em;
+        padding: 14px 36px; text-decoration: none;
+        transition: background 0.15s ease; border: none; cursor: pointer;
+      }
+      .btn-download:hover { background: #d44e1f; }
+      .beta-pill {
+        display: inline-block;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.62rem; font-weight: 500;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        color: #EB5E28; border: 1px solid #EB5E28;
+        padding: 2px 7px; vertical-align: middle;
+        margin-left: 10px; position: relative; top: -1px;
+      }
+      .meta-row {
+        display: flex; gap: 0; flex-wrap: wrap;
+        margin-top: 14px; border: 1px solid #e8e8e8;
+      }
+      .meta-item {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.04em;
+        color: #aaa; padding: 8px 18px;
+        border-right: 1px solid #e8e8e8;
+        display: flex; flex-direction: column; gap: 3px;
+      }
+      .meta-item:last-child { border-right: none; }
+      .meta-item span { color: #555; font-weight: 500; }
+      .disclaimer {
+        margin-top: 12px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.65rem; letter-spacing: 0.03em;
+        color: #bbb; line-height: 1.6;
+      }
 
     /* ── DIVIDER ──────────────────────────────── */
     hr.divider {
@@ -339,22 +345,26 @@
         and produces a formally structured legal judgment grounded entirely in verified local sources.
       </p>
     </div>
+    <div class="preview-wrap">
+  <div style="margin-bottom: 14px;">
+    <a class="btn-download" target="_blank" href="https://pub-5a681e8612c04ba8bef81c511c79745d.r2.dev/bomaAI.zip">
+      Download for Windows
+    </a>
+    <span class="beta-pill">Beta</span>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">VERSION<span>1.0.0-beta</span></div>
+    <div class="meta-item">OS<span>Windows 10/11 64-bit</span></div>
+    <div class="meta-item">SIZE<span>~2 GB</span></div>
+    <div class="meta-item">RUNTIME<span>Bundled</span></div>
+    <div class="meta-item">API KEY<span>Required</span></div>
+  </div>
+  <p class="disclaimer">
+    This is a pre-release demo. Judgments are AI-generated and do not constitute legal advice.<br>
+    A free Groq API key is required. Internet connection required for inference.
+  </p>
+</div>
 
-    <div class="hero-download">
-      <a
-        class="btn-download"
-        href="https://github.com/Elii-Muma/ACDC-sound-effect-app/releases/download/v1.0-beta.0/PowerSoundDo-er.zip"
-        target="_blank"
-      >
-        Download for Windows
-      </a>
-      <div class="meta-row">
-        <span class="meta-item">Version <span>1.0.0</span></span>
-        <span class="meta-item">OS <span>Windows 10 / 11 &nbsp;64-bit</span></span>
-        <span class="meta-item">Size <span>~XXX MB</span></span>
-        <span class="meta-item">Payments <span>may be required</span></span>
-      </div>
-    </div>
   </div>
 
   <hr class="divider" />
